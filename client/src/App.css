@@ -92,6 +92,10 @@
   border: none;
 }
 
+.box-tag:active {
+  font-size: 14px;
+}
+
 .box-picture {
   margin-top: 10px;
   display: flex;
@@ -123,7 +127,7 @@
 
 .box-icon i:hover {
   background-color: rgba(24, 105, 255, 0.377);
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .box-icon i:active {
