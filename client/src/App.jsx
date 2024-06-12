@@ -11,6 +11,7 @@ function App() {
       `http://localhost:4001/trips?keywords=${message}`
     );
     setKeepMessage(result.data.data);
+    console.log(result.data.data);
   };
 
   useEffect(() => {
@@ -54,8 +55,36 @@ function App() {
 
                   <div className="box-arrange">
                     <p>หมวด:</p>
-                    {messages.tags.map((tag) => {
-                      return <button className="box-tag">{tag}</button>;
+                    {messages.tags.map((tag, index) => {
+                      if (index === messages.tags.length - 1) {
+                        return (
+                          <>
+                            <p>และ</p>
+                            <button
+                              className="box-tag"
+                              key={index}
+                              onClick={() => {
+                                setMessage(tag);
+                              }}
+                            >
+                              {tag}
+                            </button>
+                          </>
+                        );
+                      } else {
+                        // console.log(index);
+                        return (
+                          <button
+                            className="box-tag"
+                            key={index}
+                            onClick={() => {
+                              setMessage(tag);
+                            }}
+                          >
+                            {tag}
+                          </button>
+                        );
+                      }
                     })}
                   </div>
 
@@ -63,6 +92,14 @@ function App() {
                     <img src={messages.photos[1]} alt="" />
                     <img src={messages.photos[2]} alt="" />
                     <img src={messages.photos[3]} alt="" />
+                    <button
+                      className="box-icon"
+                      onClick={() => {
+                        navigator.clipboard.writeText(messages.url);
+                      }}
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </button>
                   </div>
                 </div>
               </div>
