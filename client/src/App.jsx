@@ -7,11 +7,17 @@ function App() {
   const [keepMessage, setKeepMessage] = useState([]);
 
   const searchLocation = async () => {
+    console.log(`http://localhost:4001/trips?keywords=${message}`);
     const result = await axios.get(
       `http://localhost:4001/trips?keywords=${message}`
     );
     setKeepMessage(result.data.data);
     console.log(result.data.data);
+  };
+
+  const handleSumClick = (sumString) => {
+    sumString = message + sumString + " ";
+    setMessage(sumString);
   };
 
   useEffect(() => {
@@ -64,7 +70,7 @@ function App() {
                               className="box-tag"
                               key={index}
                               onClick={() => {
-                                setMessage(tag);
+                                handleSumClick(tag);
                               }}
                             >
                               {tag}
@@ -78,7 +84,7 @@ function App() {
                             className="box-tag"
                             key={index}
                             onClick={() => {
-                              setMessage(tag);
+                              handleSumClick(tag);
                             }}
                           >
                             {tag}
