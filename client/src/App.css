@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  font-family: "Kanit", sans-serif;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.app-wrap {
+  width: 80%;
+}
+
+.app-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.app-title h1 {
+  color: rgb(24, 85, 255);
+}
+
+.app-search {
+  margin-left: 300px;
+  margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-search input {
+  text-align: center;
+  height: 25px;
+  margin-bottom: 30px;
+}
+
+.app-show-data {
+  margin-left: 200px;
+  margin-right: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.data-box {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.big-picture {
+  width: 350px;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.box {
+  width: 100%;
+}
+
+.box-button-description {
+  text-decoration: underline;
+  border: none;
+  color: rgb(24, 85, 255);
+  background-color: rgba(240, 248, 255, 0);
+}
+
+.box-button-description:visited {
+  color: rgba(146, 118, 247, 0.842);
+}
+
+.box-arrange {
+  display: flex;
+  gap: 10px;
+}
+
+.box-tag {
+  text-decoration: underline;
+  border: none;
+}
+
+.box-picture {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.box-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
