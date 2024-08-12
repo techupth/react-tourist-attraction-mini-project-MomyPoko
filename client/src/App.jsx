@@ -7,16 +7,20 @@ function App() {
   const [keepMessage, setKeepMessage] = useState([]);
 
   const searchLocation = async () => {
-    console.log(`http://localhost:4001/trips?keywords=${message}`);
+    // console.log(`http://localhost:4001/trips?keywords=${message}`);
     const result = await axios.get(
       `http://localhost:4001/trips?keywords=${message}`
     );
     setKeepMessage(result.data.data);
-    console.log(result.data.data);
+    // console.log(result.data.data);
   };
 
   const handleSumClick = (sumString) => {
-    sumString = message + sumString + " ";
+    if (message) {
+      sumString = message + sumString + " ";
+    } else {
+      sumString = sumString + " ";
+    }
     setMessage(sumString);
   };
 

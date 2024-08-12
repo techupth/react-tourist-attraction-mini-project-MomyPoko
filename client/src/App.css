@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@keyframes glowing {
+  0% {
+    box-shadow: 0px 0px 10px #1b91ff;
+  }
+
+  100% {
+    box-shadow: 0px 0px #00ffd5c2;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -128,6 +138,7 @@
 .box-icon i:hover {
   background-color: rgba(24, 105, 255, 0.377);
   transition: 0.5s;
+  animation: glowing 10s linear infinite;
 }
 
 .box-icon i:active {
